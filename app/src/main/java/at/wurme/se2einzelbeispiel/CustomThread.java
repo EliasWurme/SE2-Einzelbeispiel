@@ -11,14 +11,14 @@ public class CustomThread extends Thread {
     private String hostname, msg, answer;
     private int port;
 
-    public CustomThread (String hostname, int port, String msg){
+    public CustomThread(String hostname, int port, String msg) {
         this.hostname = hostname;
         this.port = port;
         this.msg = msg;
     }
 
-    public void run(){
-        try{
+    public void run() {
+        try {
 
             Socket clientSocket = new Socket(this.hostname, this.port);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
@@ -35,7 +35,8 @@ public class CustomThread extends Thread {
             e.printStackTrace();
         }
     }
-    public String getAnswer (){
+
+    public String getAnswer() {
         return this.answer;
     }
 }
