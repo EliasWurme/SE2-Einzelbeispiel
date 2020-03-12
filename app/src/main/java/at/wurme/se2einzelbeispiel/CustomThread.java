@@ -21,15 +21,10 @@ public class CustomThread extends Thread {
         try{
 
             Socket clientSocket = new Socket(this.hostname, this.port);
-
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
             outToServer.writeBytes(this.msg + '\n');
-
             this.answer = inFromServer.readLine();
-
             clientSocket.close();
 
         } catch (UnknownHostException e) {

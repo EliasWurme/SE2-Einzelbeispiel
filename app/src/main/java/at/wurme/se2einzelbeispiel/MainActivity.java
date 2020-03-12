@@ -3,7 +3,6 @@ package at.wurme.se2einzelbeispiel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn = findViewById(R.id.btnSend);
-        TextView tv = findViewById(R.id.textViewAnswer);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 }catch (Exception e){
                     tv.setText("Fehler: " + msg);
                 }
-
             }
         });
 

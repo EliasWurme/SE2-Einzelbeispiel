@@ -1,12 +1,5 @@
 package at.wurme.se2einzelbeispiel;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.Socket;
-import java.net.UnknownHostException;
-
 public class ConnectionManager{
     private int port;
     private String hostname;
@@ -26,20 +19,5 @@ public class ConnectionManager{
 
        return ct.getAnswer();
     }
-
-        /*
-        String receivedMsg = "";
-        Socket clientSocket = new Socket(this.hostname, this.port);
-
-        DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-        BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
-        outToServer.writeBytes(msg + '\n');
-
-        receivedMsg = inFromServer.readLine();
-
-        clientSocket.close();
-        /*
-         */
 
 }
